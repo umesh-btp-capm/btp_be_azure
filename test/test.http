@@ -1,0 +1,18 @@
+### Load the Metadata
+GET http://localhost:4004/v2/odata/v4/azure-file/$metadata
+
+### Upload an attachment
+POST http://localhost:4004/v2/odata/v4/azure-file/AttachmentsInt
+slug: myTestPDF.pdf
+Content-Type: application/pdf
+
+<../srv/mess.pdf 
+
+### Get data of  all attachement points
+GET http://localhost:4004/v2/odata/v4/azure-file/AttachmentsList
+
+### Download an attachment
+GET http://localhost:4004/v2/odata/v4/azure-file/AttachmentsInt('74d80b10-da18-11ee-80d3-ff42893842ae')/$value 
+
+### Delete an Attachment
+DELETE http://localhost:4004/v2/odata/v4/azure-file/AttachmentsInt('74d80b10-da18-11ee-80d3-ff42893842ae')

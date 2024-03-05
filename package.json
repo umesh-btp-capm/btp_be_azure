@@ -1,0 +1,36 @@
+{
+  "name": "btp_be_azure",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@azure/storage-blob": "^12.17.0",
+    "@sap/cds": "^7",
+    "@sap/cds-hana": "^2",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.9.21",
+    "@sap/hana-client": "^2.19.21",
+    "@sap/xssec": "^3.6.1",
+    "express": "^4",
+    "hdb": "^0.19.7",
+    "passport": "^0.7.0",
+    "stream": "^0.0.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/hdi-deploy": "4.9.2"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "db": "hana"
+    },
+    "hana": {
+      "deploy-format": "hdbtable"
+    }
+  }
+}
